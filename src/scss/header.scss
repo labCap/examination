@@ -1,0 +1,43 @@
+@import 'mixin-var';
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+
+    // &__btn-box {}
+
+    &__btn {
+        margin: 0 0 0 40px;
+    }
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.doc-btn {
+    @include font($font-Inter, $interRegular, 16px, 24px, $white);
+    @include hoverBtnC;
+    background: transparent;
+
+    @media (max-width:425px) {
+        display: none;
+    }
+}
+
+.signup-btn {
+    padding: 8px 20px;
+}

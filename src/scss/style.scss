@@ -1,0 +1,82 @@
+@import 'rem';
+@import 'mixin-var';
+
+// ##############################################################################
+
+body {
+    @include font($font-Inter, $interRegular, 16px, 100%, $white);
+    background: $blackBg;
+}
+
+a {
+    display: inline-block;
+    color: $white;
+}
+
+// ##############################################################################
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1130px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.main {
+    flex: 1 1 100%;
+}
+
+.btn {
+    @include font($font-Inter, $interMedium, 16px, 24px, #fff);
+    background: $purple;
+    padding: 12px 32px;
+    border-radius: 2px;
+
+    @include hoverBtnBg;
+}
+
+.section__inner {
+    padding: 80px 0;
+    border-bottom: 1px solid $grey-dark;
+}
+
+.section__text {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section__subtitle {
+    @include font($font-Inter, $interSemiBold, 14px, 22px, $green);
+    padding: 4px 12px;
+    background: $green-light;
+    border-radius: 15px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.section__title {
+    @include font($font-Inter, $interExtraBold, 40px, 50px, $white);
+    margin-bottom: 17px;
+}
+
+.section__descr {
+    @include font($font-Inter, $interRegular, 20px, 30px, $grey);
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+// ##############################################################################
+
+@import 'header';
+@import 'intro';
+@import 'features';
+@import 'product';
+@import 'blog';
+@import 'loop';
+@import 'footer';

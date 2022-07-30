@@ -1,0 +1,46 @@
+@import 'mixin-var';
+
+.features {
+
+    &__inner {
+        padding: 80px 0 20px;
+    }
+
+    &__text {
+        margin-bottom: 80px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 -34px;
+    }
+
+    &__item {
+        flex: 0 1 325px;
+        margin: 0 32px 64px;
+        text-align: center;
+    }
+
+    &__item-img {
+        margin: 0 auto 16px;
+        width: 64px;
+        height: 64px;
+        background: $purple;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item-title {
+        margin-bottom: 8px;
+        @include font($font-Inter, $interBold, 24px, 34px, $white);
+    }
+
+    &__item-descr {
+        @include font($font-Inter, $interRegular, 18px, 27px, $grey);
+    }
+}

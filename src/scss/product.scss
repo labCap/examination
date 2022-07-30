@@ -1,0 +1,89 @@
+@import 'mixin-var';
+
+.product {
+
+    // &__inner {}
+
+    // &__text {}
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 80px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:nth-child(3) {
+            flex-direction: row-reverse;
+        }
+
+        @media (max-width:1024px) {
+            flex-direction: column;
+            align-items: center;
+
+            &:nth-child(3) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+
+    }
+
+
+    &__text-box {
+        max-width: 500px;
+
+        @media (max-width:1024px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__subtitle {
+        @include font($font-Architects, 400, 20px, 30px, $purple);
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        @include font($font-Inter, $interBold, 32px, 42px, $white);
+        margin-bottom: 8px;
+    }
+
+    &__descr {
+        @include font($font-Inter, $interRegular, 20px, 30px, $grey);
+        margin-bottom: 16px;
+    }
+
+    // &__list {}
+
+    &__list-item {
+        @include font($font-Inter, $interRegular, 18px, 27px, $grey);
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+            content: '';
+            @include ico;
+            position: absolute;
+            top: 8px;
+            left: 0;
+        }
+    }
+
+    &__img {
+        max-width: 540px;
+
+        img {
+            width: 100%;
+        }
+    }
+}

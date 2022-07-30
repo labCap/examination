@@ -1,0 +1,64 @@
+@import 'mixin-var';
+
+.blog {
+
+    &__inner {
+        border-bottom: 0;
+    }
+
+    // &__text {}
+
+    &__items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+
+    &__item {
+        flex: 0 1 352px;
+        margin: 0 12px 24px;
+        padding: 24px;
+        background: $black;
+    }
+
+    &__item-img {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 24px;
+            height: 18px;
+            background: url('@img/decor.svg')no-repeat center;
+            position: absolute;
+            top: 0;
+            right: -10px;
+        }
+
+        img {
+            border-radius: 50%;
+            overflow: hidden;
+            width: 100%;
+        }
+    }
+
+    &__item-descr {
+        @include font($font-Inter, $interRegular, 18px, 27px, $grey);
+        padding-bottom: 24px;
+        border-bottom: 1px solid $grey-dark;
+
+    }
+
+    &__item-autor {
+        @include font($font-Inter, $interRegular, 16px, 24px, $white);
+        padding-top: 20px;
+    }
+
+    &__item-prof {
+        color: $purple;
+    }
+}

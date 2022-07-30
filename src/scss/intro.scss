@@ -1,0 +1,88 @@
+@import 'mixin-var';
+
+.intro {
+    padding: 160px 0 80px;
+    background: url('@img/intro-bg.png') no-repeat right;
+
+    &__inner {
+        text-align: center;
+    }
+
+    &__text {
+        margin-bottom: 64px;
+    }
+
+    &__title {
+        @include font($font-Inter, $interExtraBold, 52px, 62px, $white);
+        letter-spacing: 0.5px;
+        margin-bottom: 16px;
+
+        @media (max-width:425px) {
+            font-size: 45px;
+        }
+    }
+
+    &__descr {
+        margin: 0 auto 32px;
+    }
+
+    &__btn-box {
+        margin: 0 -6px;
+    }
+
+    &__btn {
+        margin: 6px;
+
+        &:nth-child(2) {
+            background: $grey-dark;
+            color: $grey;
+            @include hoverBtnBg;
+
+        }
+    }
+
+    &__img {
+        max-width: 1024px;
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+
+        img {
+            opacity: 0.88;
+            width: 100%;
+        }
+    }
+
+    &__play-btn {
+        width: 88px;
+        height: 88px;
+        background: rgba(235, 241, 245, 0.8);
+        box-shadow: 0px 16px 32px rgba(21, 23, 25, 0.24);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover {
+            background: #EBF1F5;
+        }
+
+        &::before {
+            content: '';
+            border: 8px solid transparent;
+            border-left: 10px solid $purple;
+            border-radius: 2px;
+            margin: 0 0 0 4px;
+            box-shadow: 0px 16px 32px rgba(16, 22, 65, 0.24);
+            width: 20px;
+            height: 16px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

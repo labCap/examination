@@ -1,0 +1,67 @@
+$font-Architects: 'Architects Daughter', cursive;
+$font-Inter: 'Inter', sans-serif;
+
+$interRegular: 400;
+$interMedium: 500;
+$interSemiBold: 600;
+$interBold: 700;
+$interExtraBold: 800;
+$architectsDaughter: 400;
+
+$grey: #9BA9B4;
+$grey-dark: #33363A;
+$white: #D9E3EA;
+$purple: #5D5DFF;
+$purple-dark: #4B4ACF;
+$purple-light: #6c6ccf;
+$black: #25282C;
+$blackBg: #151719;
+$green-light: #C6F6D5;
+$green: #36A269;
+
+$transition: all .2s linear;
+
+$check-mark: '@img/ico1.svg';
+
+@mixin ico {
+    background: url($check-mark) no-repeat;
+    width: 13px;
+    height: 10px;
+    margin: 0 8px 0 0;
+}
+
+@mixin font($ff, $fw, $fz, $lh, $c) {
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
+    color: $c;
+    letter-spacing: 0.25px;
+}
+
+@mixin hoverBtnBg {
+    transition: $transition;
+
+    &:hover,
+    &:focus {
+        background: $purple-dark;
+        color: #fff;
+    }
+
+    &:active {
+        background: $purple-light;
+        color: #fff;
+    }
+}
+
+@mixin hoverBtnC {
+    transition: $transition;
+
+    &:hover {
+        color: $purple;
+    }
+
+    &:active {
+        color: $purple-light;
+    }
+}

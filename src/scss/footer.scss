@@ -1,0 +1,101 @@
+@import 'mixin-var';
+
+.footer {
+
+    &__top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    &__left {
+        width: 350px;
+    }
+
+    &__logo {
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        @include font($font-Inter, $interRegular, 16px, 24px, $grey);
+        margin-bottom: 20px;
+    }
+
+    &__right {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -40px;
+    }
+
+    &__box {
+        width: 160px;
+        margin: 0 40px 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        @include font($font-Inter, $interMedium, 14px, 22px, $white);
+        margin-bottom: 5px;
+    }
+
+    // &__list {}
+
+    &__link {
+        @include font($font-Inter, $interRegular, 14px, 22px, $grey);
+        margin-bottom: 5px;
+        @include hoverBtnC;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+
+    &__copyright {
+        @include font($font-Inter, $interRegular, 14px, 22px, $grey);
+
+        @media (max-width:425px) {
+            margin-bottom: 10px;
+
+        }
+    }
+
+    &__ico {
+        display: flex;
+        align-items: center;
+        margin: 0 -8px;
+    }
+}
+
+.ico {
+
+    &__link {
+        margin: 0 8px;
+        width: 32px;
+        height: 32px;
+        background: $black;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 17px;
+        color: $purple;
+        transition: $transition;
+
+        &:hover {
+            color: $black;
+            background: $purple;
+        }
+
+        &:active {
+            background: $purple-dark;
+        }
+    }
+}

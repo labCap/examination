@@ -1,0 +1,72 @@
+@import 'mixin-var';
+
+.loop {
+    margin-bottom: 64px;
+
+    &__inner {
+        padding: 65px 40px;
+        background: url('@img/loop-bg.svg') no-repeat right top $purple;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        flex: 0 1 500px;
+
+        @media (max-width:425px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        @include font($font-Inter, $interBold, 32px, 42px, $white);
+        margin-bottom: 8px;
+    }
+
+    &__descr {
+        @include font($font-Inter, $interRegular, 18px, 27px, #E2E1FF);
+    }
+}
+
+.form {
+    flex: 0 1 500px;
+    height: 48px;
+
+    &__input {
+        width: 320px;
+        padding: 12px 16px;
+        margin-bottom: 10px;
+
+        @media (max-width:425px) {
+            width: 100%;
+        }
+
+        background: $purple-dark;
+        border: 1px solid #8D8DFF;
+        border-radius: 2px;
+        @include font($font-Inter, $interRegular, 16px, 24px, #fff);
+
+        &::placeholder {
+            @include font($font-Inter, $interRegular, 16px, 24px, #ABABFF);
+        }
+
+        transition: $transition;
+
+        &:focus {
+            border-color: #c0c0fc;
+        }
+    }
+
+    &__btn {
+        @media (max-width:425px) {
+            width: 100%;
+        }
+
+        display: inline-block;
+        font-weight: 500;
+        background: #fff;
+        color: $purple;
+    }
+}
